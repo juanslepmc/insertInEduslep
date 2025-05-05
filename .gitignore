@@ -1,0 +1,5 @@
+# No subir archivo de entorno
+.env
+
+# No subir Excel de datos sensibles o temporales
+impresoras_test.xlsx

@@ -1,15 +1,20 @@
 
+import os
 import pandas as pd
 import requests
+from dotenv import load_dotenv
+
+# Cargar variables de entorno
+load_dotenv()
 
 
-
-archivo_excel = 'impresoras_test.xlsx'  # Ruta a tu archivo Excel
-
-url_api = 'https://eduslepbm.andestic.io/backend/api_modelos/dynamic/2/impresoras/'  # URL del endpoint de la API
+# Obtener variables de entorno
+archivo_excel = os.getenv('ARCHIVO_EXCEL')
+url_api = os.getenv('URL_API')
+api_key = os.getenv('API_KEY')
 headers = {
     #'Content-Type': 'application/json',
-    'api_key': '4KffXnS9iJ-ZnQxrMPzAP-T'  # Si tu API necesita autenticación
+    'api_key': api_key  # Si tu API necesita autenticación
 }
 
 
